@@ -1,0 +1,13 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime;
+
+<h2 class="pb-2">File Manager</h2>
+
+<div id="filemanager"></div>
+
+@code
+{
+protected override async Task OnAfterRenderAsync(bool firstRender) {
+    await JSRuntime.InvokeVoidAsync("renderDevExtremeControls",  "#filemanager");
+}
+}
