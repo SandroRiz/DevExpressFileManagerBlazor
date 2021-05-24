@@ -29,12 +29,12 @@ namespace FileManagerApi.Controllers
                 Request = Request,
                 FileSystemProvider = new PhysicalFileSystemProvider(@"C:\temp"),
                 //uncomment the code below to enable file/folder management
-                //AllowCopy = true,
-                //AllowCreate = true,
-                //AllowMove = true,
-                //AllowDelete = true,
-                //AllowRename = true,
-                //AllowUpload = true,
+                AllowCopy = true,
+                AllowCreate = true,
+                AllowMove = true,
+                AllowDelete = true,
+                AllowRename = true,
+                AllowUpload = true,
                 AllowDownload = true
                 //AllowedFileExtensions = new[] { ".js", ".json", ".css" }
             };
