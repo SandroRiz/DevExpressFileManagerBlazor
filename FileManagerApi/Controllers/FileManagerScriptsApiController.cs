@@ -22,6 +22,7 @@ namespace FileManagerApi.Controllers
         }
 
         [Route("api/file-manager-file-system", Name = "FileManagementFileSystemApi")]
+        [HttpPost, HttpGet]
         public object FileSystem(FileSystemCommand command, string arguments)
         {
             var config = new FileSystemConfiguration
