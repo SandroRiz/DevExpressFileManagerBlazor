@@ -35,10 +35,13 @@ function renderFileManager(container) {
                 "create": true,
                 "download": true,
                 "move": true,
+                "delete": true,
+                "upload": true,
                 "rename": true
             },
             onSelectedFileOpened: function (e) {
                 var popup = $("#photo-popup").dxPopup("instance");
+               
                 popup.option({
                     "title": e.file.name,
                     "contentTemplate": "<img src=\"" + e.file.dataItem.url + "\" class=\"photo-popup-image\" />"

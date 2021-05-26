@@ -42,6 +42,12 @@ namespace FileManagerApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FileManagerApi", Version = "v1" });
             });
+
+           //SEQ
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddSeq(Configuration.GetSection("Seq"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +61,8 @@ namespace FileManagerApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 

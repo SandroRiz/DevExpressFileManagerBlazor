@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="DevExtreme.AspNet.Core" Version="20.2.7" />
+    <PackageReference Include="Seq.Extensions.Logging" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
